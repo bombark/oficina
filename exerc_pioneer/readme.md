@@ -13,7 +13,7 @@ Se voce pausar o simulador, travará o programa
 
 ## 1. Robô Pioneiro se movimentando um Quadrado no Webots
 
-Desenvolver um programa em C para controlar um robô Pioneer 3-DX no simulador Webots, fazendo com que ele percorra uma trajetória em formato de quadrado.
+Desenvolver um programa em C para controlar um robô Pioneer 3-DX no simulador Webots, fazendo com que ele percorra uma trajetória em formato de quadrado. A principio utilize apenas o tempo para fazer os movimentos.
 
 Cenário:
 
@@ -39,9 +39,9 @@ Execuçao:
 ```
 
 
-## 2. Leitura da Posição e do Lidar
+## 2. Leitura da Posição
 
-
+Similar ao exercício 1, porém usando a leitura da odometria das rodas para poder se localizar.
 
 Compilaçao:
 

@@ -24,7 +24,7 @@ int main() {
     // Loop Principal (ctrl-c para sair)
     while ( ufr_loop_ok() ) {
         // envia velocidade linear (m/s) e velocidade angular (radianos/s)
-        ufr_put(&motor, "ff", 1.0, M_PI/4 );
+        ufr_put(&motor, "ff\n", 1.0, M_PI/4 );
     }
 
     // Fim
