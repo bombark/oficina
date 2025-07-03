@@ -1,0 +1,62 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+
+WorldInfo {
+  info [
+    "Pioneer 3DX (Adept Mobile Robots)"
+    "This two-wheel, two-motor differential drive robot has in addition a rear caster wheel"
+    "It is programmed to perform a simple obstacle avoidance behavior based on the values sensed by its 16 sonars"
+  ]
+  title "Pioneer 3-DX with blinking LEDs moving according to a Braitenberg rule"
+  basicTimeStep 8
+}
+Viewpoint {
+  fieldOfView 0.660595
+  orientation -0.16295134279695975 0.4674977167070818 0.8688456391985477 0.7630582705000455
+  position -4.744800178166261 -3.247874176848758 2.850148911171932
+  follow "Pioneer 3-DX"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 6 6
+  floorTileSize 2 2
+  wallThickness 0.1
+  wallHeight 0.4
+  wallAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/red_brick_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+    textureTransform TextureTransform {
+      scale 11 13
+    }
+  }
+}
+CardboardBox {
+  translation -1.48831 -0.352735 0.15
+  size 0.3 0.6 0.3
+}
+DEF PIONEER_3DX Pioneer3dx {
+  hidden position_0_0 -4.171449116347094e-05
+  hidden position_0_1 18.7774139214518
+  hidden position_0_2 18.777413908233726
+  hidden rotation_1 0.5773342132740178 -0.577358296979279 -0.5773582969807027 2.094419084040141
+  hidden position_1_0 -48.149443061952894
+  hidden rotation_2 0.9999999999999999 0 0 2.1160393954837975
+  hidden rotation_4 -0.5907412016578808 0.5907412040905791 0.5495904497472788 4.146650202289973
+  hidden rotation_9 -0.5907412040225744 0.5907412064552731 0.5495904446637767 4.146650194481513
+  translation 0.0321207 -0.0655397 0.0576754
+  rotation -0.023074299003224337 -0.013173399430928587 -0.9996469568167268 1.58084
+  controller "<extern>"
+}
